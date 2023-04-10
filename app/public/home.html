@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mental Health Survey</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@1.1.2/lib/bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="script.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form id="mental_health_survey">
+        <h1>Mental Health Survey</h1>
+        <label for="age">What is your age?</label>
+        <input id="age" name="age">
+        <br><br>
+
+        <label for="self-employed">Are you self-employed?</label>
+        <select id="self-employed" name="self-employed">
+            <option value="self_employed_0">No</option>
+            <option value="self_employed_1">Yes</option>
+        </select>
+        <br><br>
+
+        <label for="no_employees">How many employees does your company or organization have?</label>
+        <select name="no_employees" id="no_employees">
+            <option value="no_of_employees_1-5">1-5</option>
+            <option value="no_of_employees_6-25">6-25</option>
+            <option value="no_of_employees_26-100">26-100</option>
+            <option value="no_of_employees_100-500">100-500</option>
+            <option value="no_of_employees_500-1000">500-1000</option>
+            <option value="no_of_employees_>1000">More than 1000</option>
+        </select>
+        <br><br>
+
+        <label for="tech_company">Is your employer primarily a tech company/organization?</label>
+        <select id="tech_company" name="tech_company">
+            <option value="tech_company_0.0">No</option>
+            <option value="tech_company_1.0">Yes</option>
+        </select>
+        <br><br>
+
+        <label for="mental_healthcare_coverage">Does your employer provide mental health benefits as part of healthcare coverage?</label>
+        <select id="mental_healthcare_coverage" name="mental_healthcare_coverage">
+            <option value="mental_healthcare_coverage_I don't know">I don't know</option>
+            <option value="mental_healthcare_coverage_No">No</option>
+            <option value="mental_healthcare_coverage_Yes">Yes</option>
+        </select>
+        <br><br>
+
+
+        <label for="knowledge_about_mental_healthcare_options_workplace">Do you know the options for mental health care available under your employer-provided coverage?</label>
+        <select id="knowledge_about_mental_healthcare_options_workplace" name="knowledge_about_mental_healthcare_options_workplace">
+            <option value="knowledge_about_mental_healthcare_options_workplace_I am not sure">I am not sure</option>
+            <option value="knowledge_about_mental_healthcare_options_workplace_No">No</option>
+            <option value="knowledge_about_mental_healthcare_options_workplace_Yes">Yes</option>
+        </select>
+        <br><br>
+
+        <label for="employer_discussed_mental_health">Has your employer ever formally discussed mental health (for example, as part of a wellness campaign or other official communication)?</label>
+        <select id="employer_discussed_mental_health" name="employer_discussed_mental_health">
+            <option value="employer_discussed_mental_health _I don't know">I don't know</option>
+            <option value="employer_discussed_mental_health _No">No</option>
+            <option value="employer_discussed_mental_health _Yes">Yes</option>
+        </select>
+        <br><br>
+
+        <label for="employer_offer_resources_to_learn_about_mental_health">Does your employer offer resources to learn more about mental health concerns and options for seeking help?</label>
+        <select id="employer_offer_resources_to_learn_about_mental_health" name="employer_offer_resources_to_learn_about_mental_health">
+            <option value="employer_offer_resources_to_learn_about_mental_health_I don't know">I don't know</option>
+            <option value="employer_offer_resources_to_learn_about_mental_health_No">No</option>
+            <option value="employer_offer_resources_to_learn_about_mental_health_Yes">Yes</option>
+        </select>
+        <br><br>
+
+        <label for="medical_leave_from_work">If a mental health issue prompted you to request a medical leave from work, asking for that leave would be:</label>
+        <select id="medical_leave_from_work" name="medical_leave_from_work">
+            <option value="medical_leave_from_work _I don't know">I don't know</option>
+            <option value="medical_leave_from_work _Neither easy nor difficult">Neither easy nor difficult</option>
+            <option value="medical_leave_from_work _Somewhat difficult">Somewhat difficult</option>
+            <option value="medical_leave_from_work _Somewhat easy">Somewhat easy</option>
+            <option value="medical_leave_from_work _Very difficult">Very difficult</option>
+            <option value="medical_leave_from_work _Very easy">Very easy</option>
+        </select>
+        <br><br>
+
+
+        <label for="comfortable_discussing_with_coworkers">Would you feel comfortable discussing a mental health disorder with your coworkers?</label>
+        <select id="comfortable_discussing_with_coworkers" name="comfortable_discussing_with_coworkers">
+            <option value="comfortable_discussing_with_coworkers_No">No</option>
+            <option value="comfortable_discussing_with_coworkers_Yes">Yes</option>
+        </select>
+        <br><br>
+
+        <label for="employer_take_mental_health_seriously">Do you feel that your employer takes mental health as seriously as physical health?</label>
+        <select id="employer_take_mental_health_seriously" name="employer_take_mental_health_seriously">
+            <option value="employer_take_mental_health_seriously_I don't know">I don't know</option>
+            <option value="employer_take_mental_health_seriously_No">No</option>
+            <option value="employer_take_mental_health_seriously_Yes">Yes</option>
+        </select>
+        <br><br>
+
+        <label for="openess_of_family_friends">How willing would you be to share with friends and family that you have a mental illness?</label>
+        <select id="openess_of_family_friends" name="openess_of_family_friends">
+            <option value="openess_of_family_friends_I don't know">I don't know</option>
+            <option value="openess_of_family_friends_Neutral">Neutral</option>
+            <option value="openess_of_family_friends_Not open at all">Not open at all</option>
+            <option value="openess_of_family_friends_Somewhat not open">Somewhat not open</option>
+            <option value="openess_of_family_friends_Somewhat open">Somewhat open</option>
+            <option value="openess_of_family_friends_Very open">Very open</option>
+        </select>
+        <br><br>
+
+        <label for="family_history_mental_illness">Do you have a family history of mental illness?</label>
+        <select id="family_history_mental_illness" name="family_history_mental_illness">
+            <option value="family_history_mental_illness_I don't know">I don't know</option>
+            <option value="family_history_mental_illness_No">No</option>
+            <option value="family_history_mental_illness_Yes">Yes</option>
+        </select>
+        <br><br>
+
+        <label for="mental_health_disorder_past">Have you had a mental health disorder in the past?</label>
+        <select id="mental_health_disorder_past" name="mental_health_disorder_past">
+            <option value="mental_health_disorder_past_Maybe">Maybe</option>
+            <option value="mental_health_disorder_past_No">No</option>
+            <option value="mental_health_disorder_past_Yes">Yes</option>
+        </select>
+        <br><br>
+
+        <label for="currently_mental_health_disorder">Do you currently have a mental health disorder?</label>
+        <select id="currently_mental_health_disorder" name="currently_mental_health_disorder">
+            <option value="currently_mental_health_disorder_Maybe">Maybe</option>
+            <option value="currently_mental_health_disorder_No">No</option>
+            <option value="currently_mental_health_disorder_Yes">Yes</option>
+        </select>
+        <br><br>
+
+        <label for="gender">What is your gender?</label>
+        <select id="gender" name="gender">
+            <option value="gender_female">Female</option>
+            <option value="gender_male">Male</option>
+            <option value="gender_other">Other</option>
+        </select>
+        <br><br>
+
+        <label for="country">What country do you live in?</label>
+        <select id="country" name="country">
+            <option value="country_Afghanistan">Afghanistan</option>
+            <option value="country_Algeria">Algeria</option>
+            <option value="country_Argentina">Argentina</option>
+            <option value="country_Australia">Australia</option>
+            <option value="country_Austria">Austria</option>
+            <option value="country_Bangladesh">Bangladesh</option>
+            <option value="country_Belgium">Belgium</option>
+            <option value="country_Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+            <option value="country_Brazil">Brazil</option>
+            <option value="country_Brunei">Brunei</option>
+            <option value="country_Bulgaria">Bulgaria</option>
+            <option value="country_Canada">Canada</option>
+            <option value="country_Chile">Chile</option>
+            <option value="country_China">China</option>
+            <option value="country_Colombia">Colombia</option>
+            <option value="country_Costa Rica">Costa Rica</option>
+            <option value="country_Czech Republic">Czech Republic</option>
+            <option value="country_Denmark">Denmark</option>
+            <option value="country_Ecuador">Ecuador</option>
+            <option value="country_Estonia">Estonia</option>
+            <option value="country_Finland">Finland</option>
+            <option value="country_France">France</option>
+            <option value="country_Germany">Germany</option>
+            <option value="country_Greece">Greece</option>
+            <option value="country_Guatemala">Guatemala</option>
+            <option value="country_Hungary">Hungary</option>
+            <option value="country_India">India</option>
+            <option value="country_Iran">Iran</option>
+            <option value="country_Ireland">Ireland</option>
+            <option value="country_Israel">Israel</option>
+            <option value="country_Italy">Italy</option>
+            <option value="country_Japan">Japan</option>
+            <option value="country_Lithuania">Lithuania</option>
+            <option value="country_Mexico">Mexico</option>
+            <option value="country_Netherlands">Netherlands</option>
+            <option value="country_New Zealand">New Zealand</option>
+            <option value="country_Norway">Norway</option>
+            <option value="country_Pakistan">Pakistan</option>
+            <option value="country_Poland">Poland</option>
+            <option value="country_Romania">Romania</option>
+            <option value="country_Russia">Russia</option>
+            <option value="country_Serbia">Serbia</option>
+            <option value="country_Slovakia">Slovakia</option>
+            <option value="country_South Africa">South Africa</option>
+            <option value="country_Spain">Spain</option>
+            <option value="country_Sweden">Sweden</option>
+            <option value="country_Switzerland">Switzerland</option>
+            <option value="country_Taiwan">Taiwan</option>
+            <option value="country_United Kingdom">United Kingdom</option>
+            <option value="country_United States of America">United States of America</option>
+            <option value="country_Venezuela">Venezuela</option>
+            <option value="country_Vietnam">Vietnam</option>
+            <option value="country_Other">Other</option>
+        </select>
+        <br><br>
+
+        <label for="country_work">What country do you work in?</label>
+        <select id="country_work" name="country_work">
+            <option value="country work _Afghanistan">Afghanistan</option>
+            <option value="country work _Algeria">Algeria</option>
+            <option value="country work _Argentina">Argentina</option>
+            <option value="country work _Australia">Australia</option>
+            <option value="country work _Austria">Austria</option>
+            <option value="country work _Bangladesh">Bangladesh</option>
+            <option value="country work _Belgium">Belgium</option>
+            <option value="country work _Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+            <option value="country work _Brazil">Brazil</option>
+            <option value="country work _Brunei">Brunei</option>
+            <option value="country work _Bulgaria">Bulgaria</option>
+            <option value="country work _Canada">Canada</option>
+            <option value="country work _Chile">Chile</option>
+            <option value="country work _China">China</option>
+            <option value="country work _Colombia">Colombia</option>
+            <option value="country work _Costa Rica">Costa Rica</option>
+            <option value="country work _Czech Republic">Czech Republic</option>
+            <option value="country work _Denmark">Denmark</option>
+            <option value="country work _Ecuador">Ecuador</option>
+            <option value="country work _Estonia">Estonia</option>
+            <option value="country work _Finland">Finland</option>
+            <option value="country work _France">France</option>
+            <option value="country work _Germany">Germany</option>
+            <option value="country work _Greece">Greece</option>
+            <option value="country work _Guatemala">Guatemala</option>
+            <option value="country work _Hungary">Hungary</option>
+            <option value="country work _India">India</option>
+            <option value="country work _Iran">Iran</option>
+            <option value="country work _Ireland">Ireland</option>
+            <option value="country work _Israel">Israel</option>
+            <option value="country work _Italy">Italy</option>
+            <option value="country work _Japan">Japan</option>
+            <option value="country work _Lithuania">Lithuania</option>
+            <option value="country work _Mexico">Mexico</option>
+            <option value="country work _Netherlands">Netherlands</option>
+            <option value="country work _New Zealand">New Zealand</option>
+            <option value="country work _Norway">Norway</option>
+            <option value="country work _Pakistan">Pakistan</option>
+            <option value="country work _Poland">Poland</option>
+            <option value="country work _Romania">Romania</option>
+            <option value="country work _Russia">Russia</option>
+            <option value="country work _Serbia">Serbia</option>
+            <option value="country work _Slovakia">Slovakia</option>
+            <option value="country work _South Africa">South Africa</option>
+            <option value="country work _Spain">Spain</option>
+            <option value="country work _Sweden">Sweden</option>
+            <option value="country work _Switzerland">Switzerland</option>
+            <option value="country work _Turkey">Turkey</option>
+            <option value="country work _United Arab Emirates">United Arab Emirates</option>
+            <option value="country work _United Kingdom">United Kingdom</option>
+            <option value="country work _United States of America">United States of America</option>
+            <option value="country work _Venezuela">Venezuela</option>
+            <option value="country work _Vietnam">Vietnam</option>
+            <option value="country work _Other">Other</option>
+        </select>
+        <br><br>
+
+        <label for="work_remotely">Do you work remotely?</label>
+        <select id="work_remotely" name="work_remotely">
+            <option value="work_remotely_Always">Always</option>
+            <option value="work_remotely_Never">Never</option>
+            <option value="work_remotely_Sometimes">Sometimes</option>
+        </select>
+        <br><br>
+
+        <label for="tech_role">Is your primary role within your company related to tech/IT?</label>
+        <select id="tech_role" name="tech_role">
+            <option value="tech_role_0">No</option>
+            <option value="tech_role_1">Yes</option>
+        </select>
+        <br><br>
+        <br><br>
+        <button id="submit-button" type="button" onclick="predict()">
+            <span id="button-span">Submit</span>
+        </button>
+    </form>
+</body>
+
+</html>
