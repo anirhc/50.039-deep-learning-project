@@ -104,7 +104,7 @@ deactivate
 
 ### Web application
 
-A video demonstration can be viewed using the following [link.]()
+A video demonstration:
 
 https://user-images.githubusercontent.com/73923291/231261638-51e12c2b-9cae-46f4-af1b-d6413dd90b75.mp4
 
