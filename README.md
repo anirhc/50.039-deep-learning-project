@@ -27,16 +27,14 @@ information, mental health conditions, and various factors that may contribute t
 
 1. Install Python 3 if you haven't already.
 
-2. Download the dataset from the link provided above and add `Mental Health Data.csv` to the project directory.
+2. Open a terminal or command prompt in the project directory.
 
-3. Open a terminal or command prompt in the project directory.
-
-4. Create a virtual environment using `venv`:
+3. Create a virtual environment using `venv`:
     ```bash
     python3 -m venv myenv
     ```
 
-5. Activate the virtual environment:
+4. Activate the virtual environment:
     - On Windows:
     ```bash
     myenv\Scripts\activate.bat
@@ -46,7 +44,7 @@ information, mental health conditions, and various factors that may contribute t
     source myenv/bin/activate
     ```
 
-6. Install the required packages using `pip`:
+5. Install the required packages using `pip`:
     ```bash
     pip install -r requirements.txt
     ```
