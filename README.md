@@ -102,7 +102,7 @@ deactivate
 
 - `requirements.txt`: This file lists the required packages or dependencies for the project.
 
-### Web application
+### Web application: WellCheck
 
 A video demonstration:
 
