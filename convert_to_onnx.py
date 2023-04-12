@@ -4,6 +4,9 @@ import numpy as np
 
 
 def main():
+  """
+  This function loads a PyTorch model, generates a dummy input, and exports the model to ONNX format.
+  """
   pytorch_model = m.DeepNeuralNet(n_x = 164, n_h = [64, 32, 8], n_y = 1)
   pytorch_model.load_state_dict(torch.load('pytorch_model.pt'))
   pytorch_model.eval()

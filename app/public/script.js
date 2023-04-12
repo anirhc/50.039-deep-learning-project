@@ -28,6 +28,8 @@ async function predict() {
         19, 52, 50, 49, 47, 57, 74, 53, 58, 70, 59, 62, 63, 65
     ];
 
+    /* The above code is checking if the value of an HTML input element with the ID "age" is empty. If
+    it is empty, it will display an error message using the SweetAlert library. */
     if (document.getElementById('age').value == '') {
         swal({
             title: "Error!",
@@ -48,6 +50,11 @@ async function predict() {
     }
     console.log(scaledAges);
 
+    /* The above code is processing a mental health survey form by creating an array of 164 elements,
+    filling it with zeros, and then updating the array with the user's responses to the survey
+    questions. The updated array is then converted to a Float64Array and used as input to an ONNX
+    model loaded by the code. The model is run on the input data, and the resulting output is used
+    to generate a message to display to the user based on their survey responses. */
     var myArray = new Array(164).fill(0);
     myArray[0] = scaledAges[scaledAges.length - 1];
     console.log(myArray)
@@ -119,6 +126,10 @@ async function predict() {
     console.log(`Output tensor: ${outputTensor.data}`);
     }
 }
+/* The above code is using the jQuery library to initialize select2 dropdown menus for various form
+fields. Select2 is a jQuery-based replacement for select boxes. It supports searching, remote data
+sets, and infinite scrolling of results. The code is targeting specific form fields by their IDs and
+applying the select2 function to them. */
 
 $(document).ready(function() {
     $("#self-employed").select2();
@@ -142,6 +153,15 @@ $(document).ready(function() {
     $("#tech_role").select2();
 });
 
+/**
+ * The function provides personalized messages and recommendations based on the result of a mental
+ * health survey.
+ * @param result - The result parameter is a number that represents the percentage chance that seeking
+ * professional support for mental health would be beneficial for the individual taking the survey. The
+ * getMessage function uses this parameter to generate a title and message that provide guidance and
+ * recommendations for the individual based on their survey results.
+ * @returns An array containing a title and message based on the input result.
+ */
 function getMessage(result){
     var title;
     var message;
