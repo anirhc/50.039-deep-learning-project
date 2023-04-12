@@ -49,7 +49,7 @@ const sendEmail = (email, subject, text) => {
         <p>${text}</p>
         <p>Thank you for your time and we hope you have a great day!</p>
         <p>Best Regards,</p>
-        <p>WeCheck</p>`
+        <p>WellCheck</p>`
     };
     
     return new Promise((resolve, reject) => {
