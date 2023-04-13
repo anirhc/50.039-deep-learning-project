@@ -28,7 +28,7 @@ async function predict() {
         19, 52, 50, 49, 47, 57, 74, 53, 58, 70, 59, 62, 63, 65
     ];
 
-    /* The above code is checking if the value of an HTML input element with the ID "age" is empty. If
+    /* The below code is checking if the value of an HTML input element with the ID "age" is empty. If
     it is empty, it will display an error message using the SweetAlert library. */
     if (document.getElementById('age').value == '') {
         swal({
@@ -126,7 +126,7 @@ async function predict() {
     console.log(`Output tensor: ${outputTensor.data}`);
     }
 }
-/* The above code is using the jQuery library to initialize select2 dropdown menus for various form
+/* The below code is using the jQuery library to initialize select2 dropdown menus for various form
 fields. Select2 is a jQuery-based replacement for select boxes. It supports searching, remote data
 sets, and infinite scrolling of results. The code is targeting specific form fields by their IDs and
 applying the select2 function to them. */
