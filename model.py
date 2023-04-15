@@ -1,15 +1,6 @@
 import torch
 from torchmetrics.classification import BinaryAccuracy
 
-# Linear layer with input size n_x and output size n_y.
-class Linear(torch.nn.Module):
-    def __init__(self, n_x, n_y):
-        super().__init__()
-        self.fc = torch.nn.Linear(n_x, n_y, dtype=torch.float64)
-
-    def forward(self, x):
-        return self.fc(x)
-
 # Linear layer with input size n_x and output size n_y. Rectified Linear Unit (ReLU) activation function is applied.
 class ReLU(torch.nn.Module):
     def __init__(self, n_x, n_y):
