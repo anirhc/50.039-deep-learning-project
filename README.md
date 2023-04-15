@@ -106,6 +106,8 @@ deactivate
 
 A video demonstration:
 
+The YouTube link to the video can also be found here: https://youtu.be/p1A8288ddXc
+
 https://user-images.githubusercontent.com/73923291/231261638-51e12c2b-9cae-46f4-af1b-d6413dd90b75.mp4
 
 Follow the instructions below to run the app.
