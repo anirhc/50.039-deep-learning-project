@@ -29,6 +29,35 @@ The dataset can be downloaded using the following [link.](https://www.kaggle.com
 The mental health dataset used for this project was collected through a survey conducted in various countries around the world. The dataset contains various features related to mental health, including demographic
 information, mental health conditions, and various factors that may contribute to mental health issues.
 
+### Files
+- `Group 6 Report.pdf`: Recapitulative report
+- `Notebook.ipynb`: Jupyter Notebook containing documented code for this project. This includes
+    -   Packages required
+    -   Data preprocessing
+    -   Data Visualization
+    -   Train Test Validation Split
+    -   Model Architecture
+    -   Accuracy and Loss curves
+    -   Evaluation
+    -   Loading the trained model
+    -   Comparison of model performance against some state-of-the-art ones
+
+-  `data_preprocessing.py`: Contains steps used for cleaning, transforming, and preparing the data for model training.
+
+-  `model.py`: This file contains the implementation of the deep learning model used in this project. It includes the architecture of the neural network, as well as functions used for training and testing the model.
+
+-  `train.py`: This file is used for training the deep learning model. It includes initializing the model, training with specified hyperparameters, and saving the trained model weights for later use.
+
+-  `outputs`: This folder contains various plots or visualizations related to the project.
+
+-  `weights`: This folder contains the saved model parameter values, which can be loaded later.
+
+- `convert_to_onnx.py`: This file is used to convert the saved model to the ONNX format, which is a standard format for representing deep learning models that can be used across different platforms and frameworks.
+
+- `app`: This folder is for the web application. Includes server-side code written in Node.js for hosting and serving the trained model. Also includes frontend code for creating a user interface.
+
+- `requirements.txt`: This file lists the required packages or dependencies for the project.
+
 ### Setting up the Python Environment
 
 1. Install Python 3 if you haven't already.
@@ -74,33 +103,6 @@ To deactivate the virtual environment, simply run the following command in the t
 ```bash
 deactivate
 ```
-### Files
-- `Notebook.ipynb`: Jupyter Notebook containing documented code for this project. This includes
-    -   Packages required
-    -   Data preprocessing
-    -   Data Visualization
-    -   Train Test Validation Split
-    -   Model Architecture
-    -   Accuracy and Loss curves
-    -   Evaluation
-    -   Loading the trained model
-    -   Comparison of model performance against some state-of-the-art ones
-
--  `data_preprocessing.py`: Contains steps used for cleaning, transforming, and preparing the data for model training.
-
--  `model.py`: This file contains the implementation of the deep learning model used in this project. It includes the architecture of the neural network, as well as functions used for training and testing the model.
-
--  `train.py`: This file is used for training the deep learning model. It includes initializing the model, training with specified hyperparameters, and saving the trained model weights for later use.
-
--  `outputs`: This folder contains various plots or visualizations related to the project.
-
--  `weights`: This folder contains the saved model parameter values, which can be loaded later.
-
-- `convert_to_onnx.py`: This file is used to convert the saved model to the ONNX format, which is a standard format for representing deep learning models that can be used across different platforms and frameworks.
-
-- `app`: This folder is for the web application. Includes server-side code written in Node.js for hosting and serving the trained model. Also includes frontend code for creating a user interface.
-
-- `requirements.txt`: This file lists the required packages or dependencies for the project.
 
 ### Web application: WellCheck
 
